@@ -4,7 +4,7 @@ id,guild,boss
 605879,Final Exit+Honorus,Leotheras:4
 605879,Final Exit+Honorus,Karathress:4
 605879,Final Exit+Honorus,Morogrim:4
-605879,Final Exit+Honorus,Vashj:0
+605879,Final Exit+Honorus,Vashj:3
 605890,Dreamstate,Hydross:3
 605890,Dreamstate,Lurker:3
 605890,Dreamstate,Leotheras:3
@@ -29,9 +29,9 @@ id,guild,boss
 606083,Void,Karathress:4
 606083,Void,Morogrim:4
 606083,Void,Vashj:0
-606695,Genesis+Omega,Hydross:0
+606695,Genesis+Omega,Hydross:3
 606695,Genesis+Omega,Lurker:3
-606695,Genesis+Omega,Leotheras:0
+606695,Genesis+Omega,Leotheras:3
 606695,Genesis+Omega,Karathress:0
 606695,Genesis+Omega,Morogrim:0
 606695,Genesis+Omega,Vashj:0
@@ -40,7 +40,7 @@ id,guild,boss
 606701,Untamed,Leotheras:4
 606701,Untamed,Karathress:4
 606701,Untamed,Morogrim:4
-606701,Untamed,Vashj:0
+606701,Untamed,Vashj:3
 606781,Eclypse,Hydross:4
 606781,Eclypse,Lurker:4
 606781,Eclypse,Leotheras:4
