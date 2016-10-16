@@ -7,12 +7,21 @@
     <link rel="stylesheet" type="text/css" href="css/skeleton.min.css" />
     <link rel="stylesheet" type="text/css" href="css/dc.min.css" />
     <style>
-        #bar .x.axis text {
+        #bar-ssc .x.axis text {
             text-anchor: end !important;
             transform: rotate(-30deg);
         }
 
-        #pie text.pie-slice {
+        #pie-ssc text.pie-slice {
+            fill: black;
+        }
+
+        #bar-tk .x.axis text {
+            text-anchor: end !important;
+            transform: rotate(-30deg);
+        }
+
+        #pie-tk text.pie-slice {
             fill: black;
         }
     </style>
@@ -21,28 +30,39 @@
 <body>
     <div class="container">
         <section class="header">
-            <h2>Tier 5/Serpentshrine Cavern Progress (Hellfire)</h2>
+            <h2>Tier 5 Progress (Hellfire)</h2>
         </section>
 
         <div class="row">
             <h5>What is this?</h5>
-            <p>This is a small visualisation built using <a href="https://github.com/dc-js/dc.js">dc.js</a> and serves to display the progess made by guilds in Serpentshrine Cavern during the first week of Tier 5 being released. You can click on the
+            <p>This is a small visualisation built using <a href="https://github.com/dc-js/dc.js">dc.js</a> and serves to display the progess made by guilds in Tier 5 content. You can click on the
                 bars or pie chart segments to filter the data by guild and/or boss.</p>
         </div>
 
         <div class="row">
             <div class="nine columns">
-                <div id="bar">
-                    <h5>Boss Kill Count by Guild</h5></div>
+                <div id="bar-ssc">
+                    <h5>Boss Kill Count by Guild (SSC)</h5></div>
             </div>
             <div class="three columns">
-                <div id="pie">
+                <div id="pie-ssc">
                     <h5>Distribution of kills by boss<h5></div>
             </div>
         </div>
 
         <div class="row">
-            <p>Data accurate as of: 28/09/2016 00:56</p>
+            <div class="nine columns">
+                <div id="bar-tk">
+                    <h5>Boss Kill Count by Guild (TK)</h5></div>
+            </div>
+            <div class="three columns">
+                <div id="pie-tk">
+                    <h5>Distribution of kills by boss<h5></div>
+            </div>
+        </div>
+
+        <div class="row">
+            <p>Data accurate as of: 16/10/2016 15:21</p>
         </div>
     </div>
 
@@ -66,9 +86,9 @@
             console.log(filter + "(" + f.length + ") = " + JSON.stringify(f).replace("[", "[\n\t").replace(/}\,/g, "},\n\t").replace("]", "\n]"));
         }
 
-        var bar = dc.barChart("#bar");
-        var pie = dc.pieChart("#pie");
-        d3.csv('data.csv', function(data) {
+        var barSsc = dc.barChart("#bar-ssc");
+        var pieSsc = dc.pieChart("#pie-ssc");
+        d3.csv('data-ssc.csv', function(data) {
 
 
             data.forEach(function(d) {
@@ -90,7 +110,7 @@
                 return d.boss.split(":")[1];
             });
 
-            bar
+            barSsc
                 .width(700)
                 .height(350)
                 .margins({
@@ -108,15 +128,68 @@
                 .xAxisLabel("Guild")
                 .dimension(guildDimension)
                 .group(kills);
-            bar.yAxis().ticks(6);
-            bar.render();
+            barSsc.yAxis().ticks(6);
+            barSsc.render();
 
-            pie
+            pieSsc
                 .width(200)
                 .height(200)
                 .dimension(bossDimension)
                 .group(bossGroup);
-            pie.render();
+            pieSsc.render();
+        });
+
+        var barTk = dc.barChart("#bar-tk");
+        var pieTk = dc.pieChart("#pie-tk");
+        d3.csv('data-tk.csv', function(data) {
+
+
+            data.forEach(function(d) {
+                var arr = d.boss.split(":");
+                d.boss = arr[1] >= 3 ? arr[0] + ":1" : arr[0] + ":0";
+            });
+
+            var ndx = crossfilter(data);
+            var guildDimension = ndx.dimension(function(d) {
+                return d.guild;
+            });
+            var kills = guildDimension.group().reduceSum(function(d) {
+                return d.boss.split(":")[1];
+            });
+            var bossDimension = ndx.dimension(function(d) {
+                return d.boss.split(":")[0]
+            });
+            var bossGroup = bossDimension.group().reduceSum(function(d) {
+                return d.boss.split(":")[1];
+            });
+
+            barTk
+                .width(700)
+                .height(350)
+                .margins({
+                    left: 40,
+                    top: 30,
+                    bottom: 60,
+                    right: 0
+                })
+                .brushOn(false)
+                .x(d3.scale.ordinal().domain(data.map(function(d) {
+                    return d.guild;
+                })))
+                .xUnits(dc.units.ordinal)
+                .yAxisLabel("Boss Kill Count")
+                .xAxisLabel("Guild")
+                .dimension(guildDimension)
+                .group(kills);
+            barTk.yAxis().ticks(4);
+            barTk.render();
+
+            pieTk
+                .width(200)
+                .height(200)
+                .dimension(bossDimension)
+                .group(bossGroup);
+            pieTk.render();
         });
     </script>
 </body>
