@@ -3,19 +3,31 @@ id,guild,boss
 620997,Dreamstate,Solarian:3
 620997,Dreamstate,Void Reaver:3
 620997,Dreamstate,Kael'thas:3
-621418,Schicksal,Al'ar:0
-621418,Schicksal,Solarian:0
-621418,Schicksal,Void Reaver:3
-621418,Schicksal,Kael'thas:0
+621418,addicted+Schicksal,Al'ar:0
+621418,addicted+Schicksal,Solarian:0
+621418,addicted+Schicksal,Void Reaver:3
+621418,addicted+Schicksal,Kael'thas:0
 621428,Lethality,Al'ar:0
 621428,Lethality,Solarian:0
 621428,Lethality,Void Reaver:3
 621428,Lethality,Kael'thas:0
 621465,Eclypse,Al'ar:0
-621465,Eclypse,Solarian:0
+621465,Eclypse,Solarian:3
 621465,Eclypse,Void Reaver:3
 621465,Eclypse,Kael'thas:0
 621472,Untamed,Al'ar:0
-621472,Untamed,Solarian:0
+621472,Untamed,Solarian:3
 621472,Untamed,Void Reaver:3
 621472,Untamed,Kael'thas:0
+622998,Final Exit+Honorus,Al'ar:0
+622998,Final Exit+Honorus,Solarian:3
+622998,Final Exit+Honorus,Void Reaver:3
+622998,Final Exit+Honorus,Kael'thas:0
+623048,Void,Al'ar:3
+623048,Void,Solarian:3
+623048,Void,Void Reaver:3
+623048,Void,Kael'thas:3
+623347,Clan Bloodfist,Al'ar:0
+623347,Clan Bloodfist,Solarian:0
+623347,Clan Bloodfist,Void Reaver:3
+623347,Clan Bloodfist,Kael'thas:0

@@ -1,15 +1,15 @@
 id,guild,boss
-620878,Inquisition,Hydross:3
-620878,Inquisition,Lurker:3
-620878,Inquisition,Leotheras:3
-620878,Inquisition,Karathress:3
-620878,Inquisition,Morogrim:3
-620878,Inquisition,Vashj:0
-620882,Endurance,Hydross:3
-620882,Endurance,Lurker:3
-620882,Endurance,Leotheras:0
-620882,Endurance,Karathress:0
-620882,Endurance,Morogrim:0
+620878,Inquisition,Hydross:4
+620878,Inquisition,Lurker:4
+620878,Inquisition,Leotheras:4
+620878,Inquisition,Karathress:4
+620878,Inquisition,Morogrim:4
+620878,Inquisition,Vashj:3
+620882,Endurance,Hydross:4
+620882,Endurance,Lurker:4
+620882,Endurance,Leotheras:4
+620882,Endurance,Karathress:4
+620882,Endurance,Morogrim:4
 620882,Endurance,Vashj:0
 620893,Final Exit,Hydross:3
 620893,Final Exit,Lurker:3
@@ -41,11 +41,11 @@ id,guild,boss
 620932,Schicksal,Karathress:4
 620932,Schicksal,Morogrim:4
 620932,Schicksal,Vashj:3
-620936,Lethality,Hydross:3
-620936,Lethality,Lurker:3
-620936,Lethality,Leotheras:3
-620936,Lethality,Karathress:3
-620936,Lethality,Morogrim:3
+620936,Lethality,Hydross:4
+620936,Lethality,Lurker:4
+620936,Lethality,Leotheras:4
+620936,Lethality,Karathress:4
+620936,Lethality,Morogrim:4
 620936,Lethality,Vashj:0
 620941,Untamed,Hydross:4
 620941,Untamed,Lurker:4
@@ -70,4 +70,10 @@ id,guild,boss
 622589,Clan Bloodfist,Leotheras:4
 622589,Clan Bloodfist,Karathress:4
 622589,Clan Bloodfist,Morogrim:4
-622589,Clan Bloodfist,Vashj:0
+622589,Clan Bloodfist,Vashj:3
+622910,Bloodlust,Hydross:3
+622910,Bloodlust,Lurker:4
+622910,Bloodlust,Leotheras:0
+622910,Bloodlust,Karathress:0
+622910,Bloodlust,Morogrim:0
+622910,Bloodlust,Vashj:0
